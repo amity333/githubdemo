@@ -1,0 +1,1185 @@
+
+absonava@PUNHWD12822 MINGW64 ~ (master)
+$ mkdir demo
+
+absonava@PUNHWD12822 MINGW64 ~ (master)
+$ cd demo
+
+absonava@PUNHWD12822 MINGW64 ~/demo (master)
+$ git init
+Initialized empty Git repository in C:/Users/absonava/demo/.git/
+
+absonava@PUNHWD12822 MINGW64 ~/demo (master)
+$ git add tablescript.txt
+
+absonava@PUNHWD12822 MINGW64 ~/demo (master)
+$ git commit -m "first commit"
+[master (root-commit) ebf65af] first commit
+ Committer: unknown <absonava@PUNHWD12822.corp.capgemini.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 73 insertions(+)
+ create mode 100644 tablescript.txt
+
+absonava@PUNHWD12822 MINGW64 ~/demo (master)
+$ git remote add origin https://github.com/absonavane/git.git
+
+absonava@PUNHWD12822 MINGW64 ~/demo (master)
+$ git push -u origin master
+fatal: unable to access 'https://github.com/absonavane/git.git/': Failed to conn                                                                                                    ect to github.com port 443: Connection refused
+
+absonava@PUNHWD12822 MINGW64 ~/demo (master)
+$ git config --global http.proxy http://10.102.22.17:8080
+
+absonava@PUNHWD12822 MINGW64 ~/demo (master)
+$ git push -u origin master
+Username for 'https://github.com': absonavane
+Password for 'https://absonavane@github.com':
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 575 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/absonavane/git.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+
+absonava@PUNHWD12822 MINGW64 ~/demo (master)
+$ mkdir Developer
+
+absonava@PUNHWD12822 MINGW64 ~/demo (master)
+$ cd ..
+
+absonava@PUNHWD12822 MINGW64 ~ (master)
+$ mkdir Developer
+
+absonava@PUNHWD12822 MINGW64 ~ (master)
+$ cd Developer
+
+absonava@PUNHWD12822 MINGW64 ~/Developer (master)
+$ git init
+Initialized empty Git repository in C:/Users/absonava/Developer/.git/
+
+absonava@PUNHWD12822 MINGW64 ~/Developer (master)
+$ mkdir Tester
+
+absonava@PUNHWD12822 MINGW64 ~/Developer (master)
+$ git init
+Reinitialized existing Git repository in C:/Users/absonava/Developer/.git/
+
+absonava@PUNHWD12822 MINGW64 ~/Developer (master)
+$ cd ..
+
+absonava@PUNHWD12822 MINGW64 ~ (master)
+$ cd ..
+
+absonava@PUNHWD12822 MINGW64 /c/Users
+$ cd absonava
+
+absonava@PUNHWD12822 MINGW64 ~ (master)
+$ mkdir Tester
+
+absonava@PUNHWD12822 MINGW64 ~ (master)
+$ git init
+Reinitialized existing Git repository in C:/Users/absonava/.git/
+
+absonava@PUNHWD12822 MINGW64 ~ (master)
+$ cd Tester
+
+absonava@PUNHWD12822 MINGW64 ~/Tester (master)
+$ git init
+Initialized empty Git repository in C:/Users/absonava/Tester/.git/
+
+absonava@PUNHWD12822 MINGW64 ~/Tester (master)
+$ cd ..
+
+absonava@PUNHWD12822 MINGW64 ~ (master)
+$ mkdir A
+
+absonava@PUNHWD12822 MINGW64 ~ (master)
+$ cd A
+
+absonava@PUNHWD12822 MINGW64 ~/A (master)
+$ git init
+Initialized empty Git repository in C:/Users/absonava/A/.git/
+
+absonava@PUNHWD12822 MINGW64 ~/A (master)
+$ cd ..
+
+absonava@PUNHWD12822 MINGW64 ~ (master)
+$ mkdir B
+
+absonava@PUNHWD12822 MINGW64 ~ (master)
+$ cd B
+
+absonava@PUNHWD12822 MINGW64 ~/B (master)
+$ git init
+Initialized empty Git repository in C:/Users/absonava/B/.git/
+
+absonava@PUNHWD12822 MINGW64 ~/B (master)
+$ cd ..
+
+absonava@PUNHWD12822 MINGW64 ~ (master)
+$ mkdir E
+
+absonava@PUNHWD12822 MINGW64 ~ (master)
+$ git init
+Reinitialized existing Git repository in C:/Users/absonava/.git/
+
+absonava@PUNHWD12822 MINGW64 ~ (master)
+$ cd E
+
+absonava@PUNHWD12822 MINGW64 ~/E (master)
+$ git init
+Initialized empty Git repository in C:/Users/absonava/E/.git/
+
+absonava@PUNHWD12822 MINGW64 ~/E (master)
+$ git branch
+
+absonava@PUNHWD12822 MINGW64 ~/E (master)
+$ ^C
+
+absonava@PUNHWD12822 MINGW64 ~/E (master)
+$ cd B
+bash: cd: B: No such file or directory
+
+absonava@PUNHWD12822 MINGW64 ~/E (master)
+$ cd ..
+
+absonava@PUNHWD12822 MINGW64 ~ (master)
+$ cd B
+
+absonava@PUNHWD12822 MINGW64 ~/B (master)
+$ git commit -m "first commit"
+On branch master
+
+Initial commit
+
+Untracked files:
+        info.txt
+
+nothing added to commit but untracked files present
+
+absonava@PUNHWD12822 MINGW64 ~/B (master)
+$ git commit -m "second commit"
+On branch master
+
+Initial commit
+
+Untracked files:
+        info.txt
+
+nothing added to commit but untracked files present
+
+absonava@PUNHWD12822 MINGW64 ~/B (master)
+$ git add info.txt
+
+absonava@PUNHWD12822 MINGW64 ~/B (master)
+$ git commit -m "second commit"
+[master (root-commit) c189ab3] second commit
+ Committer: unknown <absonava@PUNHWD12822.corp.capgemini.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+ create mode 100644 info.txt
+
+absonava@PUNHWD12822 MINGW64 ~/B (master)
+$ cd ..
+
+absonava@PUNHWD12822 MINGW64 ~ (master)
+$ git branch Development
+fatal: Not a valid object name: 'master'.
+
+absonava@PUNHWD12822 MINGW64 ~ (master)
+$ git push origin Developement
+error: src refspec Developement does not match any.
+error: failed to push some refs to 'origin'
+
+absonava@PUNHWD12822 MINGW64 ~ (master)
+$ git checkout -b Developement
+Switched to a new branch 'Developement'
+
+absonava@PUNHWD12822 MINGW64 ~ (Developement)
+$ git push origin Developement
+error: src refspec Developement does not match any.
+error: failed to push some refs to 'origin'
+
+absonava@PUNHWD12822 MINGW64 ~ (Developement)
+$ ^C
+
+absonava@PUNHWD12822 MINGW64 ~ (Developement)
+$ git push -u origin master
+error: src refspec master does not match any.
+error: failed to push some refs to 'origin'
+
+absonava@PUNHWD12822 MINGW64 ~ (Developement)
+$ git status
+On branch Developement
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .angular-config.json
+        .bash_history
+        .cisco/
+        .config/
+        .eclipse/
+        .gitconfig
+        .m2/
+        .npmrc
+        .oracle_jre_usage/
+        .p2/
+        AppData/
+        B/
+        NTUSER.DAT
+        NTUSER.DAT{016888bd-6c6f-11de-8d1d-001e0bcde3ec}.TM.blf
+        NTUSER.DAT{016888bd-6c6f-11de-8d1d-001e0bcde3ec}.TMContainer000000000000                                                                                                    00000001.regtrans-ms
+        NTUSER.DAT{016888bd-6c6f-11de-8d1d-001e0bcde3ec}.TMContainer000000000000                                                                                                    00000002.regtrans-ms
+        Oracle/
+        abhishek/
+        create1/
+        demo/
+        ntuser.dat.LOG1
+        ntuser.dat.LOG2
+        ntuser.ini
+        ntuser.pol
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+absonava@PUNHWD12822 MINGW64 ~ (Developement)
+$ ^C
+
+absonava@PUNHWD12822 MINGW64 ~ (Developement)
+$ $ git remote add origin https://github.com/absonavane/git.git
+bash: $: command not found
+
+absonava@PUNHWD12822 MINGW64 ~ (Developement)
+$  git remote add origin https://github.com/absonavane/git.git
+
+absonava@PUNHWD12822 MINGW64 ~ (Developement)
+$ ^C
+
+absonava@PUNHWD12822 MINGW64 ~ (Developement)
+$ $ git push -u origin master
+bash: $: command not found
+
+absonava@PUNHWD12822 MINGW64 ~ (Developement)
+$ ^C
+
+absonava@PUNHWD12822 MINGW64 ~ (Developement)
+$  git push -u origin master
+error: src refspec master does not match any.
+error: failed to push some refs to 'https://github.com/absonavane/git.git'
+
+absonava@PUNHWD12822 MINGW64 ~ (Developement)
+$ $ git commit -m "first commit"
+bash: $: command not found
+
+absonava@PUNHWD12822 MINGW64 ~ (Developement)
+$ git commit -m "first commit"
+fatal: Unable to create 'C:/Users/absonava/.git/index.lock': File exists.
+
+If no other git process is currently running, this probably means a
+git process crashed in this repository earlier. Make sure no other git
+process is running and remove the file manually to continue.
+
+absonava@PUNHWD12822 MINGW64 ~ (Developement)
+$ git commit -m "second commit"
+fatal: Unable to create 'C:/Users/absonava/.git/index.lock': File exists.
+
+If no other git process is currently running, this probably means a
+git process crashed in this repository earlier. Make sure no other git
+process is running and remove the file manually to continue.
+
+absonava@PUNHWD12822 MINGW64 ~ (Developement)
+$ cd B
+
+absonava@PUNHWD12822 MINGW64 ~/B (master)
+$ git commit -m "second commit"
+On branch master
+nothing to commit, working directory clean
+
+absonava@PUNHWD12822 MINGW64 ~/B (master)
+$ add info.txt
+bash: add: command not found
+
+absonava@PUNHWD12822 MINGW64 ~/B (master)
+$ git add info.txt
+
+absonava@PUNHWD12822 MINGW64 ~/B (master)
+$ git commit -m "second commit"
+On branch master
+nothing to commit, working directory clean
+
+absonava@PUNHWD12822 MINGW64 ~/B (master)
+$ $ git config --global http.proxy http://10.102.22.17:8080
+bash: $: command not found
+
+absonava@PUNHWD12822 MINGW64 ~/B (master)
+$  git config --global http.proxy http://10.102.22.17:8080
+
+absonava@PUNHWD12822 MINGW64 ~/B (master)
+$  git push origin Developement
+error: src refspec Developement does not match any.
+error: failed to push some refs to 'origin'
+
+absonava@PUNHWD12822 MINGW64 ~/B (master)
+$ git push -u origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+absonava@PUNHWD12822 MINGW64 ~/B (master)
+$  git remote add origin https://github.com/absonavane/git.git
+
+absonava@PUNHWD12822 MINGW64 ~/B (master)
+$ git push -u origin master
+Username for 'https://github.com': absonavane
+Password for 'https://absonavane@github.com':
+To https://github.com/absonavane/git.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/absonavane/git.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+absonava@PUNHWD12822 MINGW64 ~/B (master)
+$ git pull -u origin master
+error: unknown switch `u'
+usage: git pull [options] [<repository> [<refspec>...]]
+    Fetch one or more remote refs and integrate it/them with the current HEAD.
+
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --progress            force progress reporting
+
+Options related to merging
+    -r, --rebase[=<false|true|preserve>]
+                          incorporate changes by rebasing rather than merging
+    -n                    do not show a diffstat at the end of the merge
+    --stat                show a diffstat at the end of the merge
+    --summary             (synonym to --stat)
+    --log[=<n>]           add (at most <n>) entries from shortlog to merge commit message
+    --squash              create a single commit instead of doing a merge
+    --commit              perform a commit if the merge succeeds (default)
+    -e, --edit            edit message before committing
+    --ff                  allow fast-forward
+    --ff-only             abort if fast-forward is not possible
+    --verify-signatures   verify that the named commit has a valid GPG signature
+    -s, --strategy <strategy>
+                          merge strategy to use
+    -X, --strategy-option <option>
+                          option for selected merge strategy
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+
+Options related to fetching
+    --all                 fetch from all remotes
+    -a, --append          append to .git/FETCH_HEAD instead of overwriting
+    --upload-pack <path>  path to upload pack on remote end
+    -f, --force           force overwrite of local branch
+    -t, --tags            fetch all tags and associated objects
+    -p, --prune           prune remote-tracking branches no longer on remote
+    --recurse-submodules[=<on-demand>]
+                          control recursive fetching of submodules
+    --dry-run             dry run
+    -k, --keep            keep downloaded pack
+    --depth <depth>       deepen history of shallow clone
+    --unshallow           convert to a complete repository
+    --update-shallow      accept refs that update .git/shallow
+    --refmap <refmap>     specify fetch refmap
+
+
+absonava@PUNHWD12822 MINGW64 ~/B (master)
+$ git pull
+warning: no common commits
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/absonavane/git
+ * [new branch]      master     -> origin/master
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> master
+
+
+absonava@PUNHWD12822 MINGW64 ~/B (master)
+$ git push -u origin master
+Username for 'https://github.com': absonavane
+Password for 'https://absonavane@github.com':
+To https://github.com/absonavane/git.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/absonavane/git.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+absonava@PUNHWD12822 MINGW64 ~/B (master)
+$ git commit -m "second commit"
+On branch master
+Changes not staged for commit:
+        modified:   info.txt
+
+no changes added to commit
+
+absonava@PUNHWD12822 MINGW64 ~/B (master)
+$ git add info.txt
+
+absonava@PUNHWD12822 MINGW64 ~/B (master)
+$ git commit -m "second commit"
+[master 64172e4] second commit
+ Committer: unknown <absonava@PUNHWD12822.corp.capgemini.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+absonava@PUNHWD12822 MINGW64 ~/B (master)
+$ git push -u origin master
+Username for 'https://github.com': absonavane
+Password for 'https://absonavane@github.com':
+To https://github.com/absonavane/git.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/absonavane/git.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+absonava@PUNHWD12822 MINGW64 ~/B (master)
+$ git rebase origin/master
+First, rewinding head to replay your work on top of it...
+Applying: second commit
+Applying: second commit
+
+absonava@PUNHWD12822 MINGW64 ~/B (master)
+$ git add info.txt
+
+absonava@PUNHWD12822 MINGW64 ~/B (master)
+$ git add tablescript.txt
+
+absonava@PUNHWD12822 MINGW64 ~/B (master)
+$ git commit -m "third commit"
+On branch master
+nothing to commit, working directory clean
+
+absonava@PUNHWD12822 MINGW64 ~/B (master)
+$ git push -u origin master
+Username for 'https://github.com': absonavane
+Password for 'https://absonavane@github.com':
+Counting objects: 6, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 586 bytes | 0 bytes/s, done.
+Total 6 (delta 0), reused 0 (delta 0)
+To https://github.com/absonavane/git.git
+   ebf65af..9d306ab  master -> master
+Branch master set up to track remote branch master from origin.
+
+absonava@PUNHWD12822 MINGW64 ~/B (master)
+$ git branch
+* master
+
+absonava@PUNHWD12822 MINGW64 ~/B (master)
+$ git branch <developement>
+bash: syntax error near unexpected token `newline'
+
+absonava@PUNHWD12822 MINGW64 ~/B (master)
+$ git branch developement
+
+absonava@PUNHWD12822 MINGW64 ~/B (master)
+$ git branch
+  developement
+* master
+
+absonava@PUNHWD12822 MINGW64 ~/B (master)
+$ git branch testing
+
+absonava@PUNHWD12822 MINGW64 ~/B (master)
+$ git push -u origin master
+Username for 'https://github.com': absonavane
+Password for 'https://absonavane@github.com':
+Branch master set up to track remote branch master from origin.
+Everything up-to-date
+
+absonava@PUNHWD12822 MINGW64 ~/B (master)
+$ git push -u origin developement
+Username for 'https://github.com': absonavane
+Password for 'https://absonavane@github.com':
+Total 0 (delta 0), reused 0 (delta 0)
+remote:
+remote: Create a pull request for 'developement' on GitHub by visiting:
+remote:      https://github.com/absonavane/git/pull/new/developement
+remote:
+To https://github.com/absonavane/git.git
+ * [new branch]      developement -> developement
+Branch developement set up to track remote branch developement from origin.
+
+absonava@PUNHWD12822 MINGW64 ~/B (master)
+$ git push -u origin testing
+Username for 'https://github.com': absonava
+Password for 'https://absonava@github.com':
+fg
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/absonavane/git.git/'
+
+absonava@PUNHWD12822 MINGW64 ~/B (master)
+$ fg
+bash: fg: current: no such job
+
+absonava@PUNHWD12822 MINGW64 ~/B (master)
+$ git push -u origin testing
+Username for 'https://github.com': absonavane
+Password for 'https://absonavane@github.com':
+Total 0 (delta 0), reused 0 (delta 0)
+remote:
+remote: Create a pull request for 'testing' on GitHub by visiting:
+remote:      https://github.com/absonavane/git/pull/new/testing
+remote:
+To https://github.com/absonavane/git.git
+ * [new branch]      testing -> testing
+Branch testing set up to track remote branch testing from origin.
+
+absonava@PUNHWD12822 MINGW64 ~/B (master)
+$ cd ..
+
+absonava@PUNHWD12822 MINGW64 ~ (Developement)
+$ cd C\
+> g
+bash: cd: Cg: No such file or directory
+
+absonava@PUNHWD12822 MINGW64 ~ (Developement)
+$ cd C
+
+absonava@PUNHWD12822 MINGW64 ~/C (master)
+$ git pull
+fatal: No remote repository specified.  Please, specify either a URL or a
+remote name from which new revisions should be fetched.
+
+absonava@PUNHWD12822 MINGW64 ~/C (master)
+$ git pull
+fatal: No remote repository specified.  Please, specify either a URL or a
+remote name from which new revisions should be fetched.
+
+absonava@PUNHWD12822 MINGW64 ~/C (master)
+$  git pull origin developement
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+absonava@PUNHWD12822 MINGW64 ~/C (master)
+$ git remote add origin https://github.com/absonavane/git.git
+
+absonava@PUNHWD12822 MINGW64 ~/C (master)
+$  git pull origin developement
+remote: Enumerating objects: 9, done.
+remote: Counting objects: 100% (9/9), done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 9 (delta 0), reused 9 (delta 0), pack-reused 0
+Unpacking objects: 100% (9/9), done.
+From https://github.com/absonavane/git
+ * branch            developement -> FETCH_HEAD
+ * [new branch]      developement -> origin/developement
+
+absonava@PUNHWD12822 MINGW64 ~/C (master)
+$ cd ..
+
+absonava@PUNHWD12822 MINGW64 ~ (Developement)
+$ cd D
+
+absonava@PUNHWD12822 MINGW64 ~/D (master)
+$  git remote add origin https://github.com/absonavane/git.git
+
+absonava@PUNHWD12822 MINGW64 ~/D (master)
+$ $  git pull origin developement
+bash: $: command not found
+
+absonava@PUNHWD12822 MINGW64 ~/D (master)
+$ git pull origin testing
+remote: Enumerating objects: 9, done.
+remote: Counting objects: 100% (9/9), done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 9 (delta 0), reused 9 (delta 0), pack-reused 0
+Unpacking objects: 100% (9/9), done.
+From https://github.com/absonavane/git
+ * branch            testing    -> FETCH_HEAD
+ * [new branch]      testing    -> origin/testing
+
+absonava@PUNHWD12822 MINGW64 ~/D (master)
+$ cd ../C
+
+absonava@PUNHWD12822 MINGW64 ~/C (master)
+$ cd developement
+
+absonava@PUNHWD12822 MINGW64 ~/C/developement (master)
+$ git pull "https://github.com/absonavane/git.git" developement
+From https://github.com/absonavane/git
+ * branch            developement -> FETCH_HEAD
+Already up-to-date.
+
+absonava@PUNHWD12822 MINGW64 ~/C/developement (master)
+$ git pull "https://github.com/absonavane/git.git" developement
+From https://github.com/absonavane/git
+ * branch            developement -> FETCH_HEAD
+Already up-to-date.
+
+absonava@PUNHWD12822 MINGW64 ~/C/developement (master)
+$ git pull "https://github.com/absonavane/git.git" developement
+From https://github.com/absonavane/git
+ * branch            developement -> FETCH_HEAD
+Already up-to-date.
+
+absonava@PUNHWD12822 MINGW64 ~/C/developement (master)
+$ cd ..
+
+absonava@PUNHWD12822 MINGW64 ~/C (master)
+$ git pull "https://github.com/absonavane/git.git" developement
+From https://github.com/absonavane/git
+ * branch            developement -> FETCH_HEAD
+Already up-to-date.
+
+absonava@PUNHWD12822 MINGW64 ~/C (master)
+$ git add .
+
+absonava@PUNHWD12822 MINGW64 ~/C (master)
+$ git commit -m "javafile"
+[master eea5b7f] javafile
+ Committer: unknown <absonava@PUNHWD12822.corp.capgemini.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+ create mode 100644 MyJavaCode.txt.txt
+
+absonava@PUNHWD12822 MINGW64 ~/C (master)
+$ cd ../D
+
+absonava@PUNHWD12822 MINGW64 ~/D (master)
+$ git add .
+
+absonava@PUNHWD12822 MINGW64 ~/D (master)
+$ git commit -m "testfile"
+[master 39ac149] testfile
+ Committer: unknown <absonava@PUNHWD12822.corp.capgemini.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+ create mode 100644 MyJUnitTestCase.txt.txt
+
+absonava@PUNHWD12822 MINGW64 ~/D (master)
+$ git remote add C ..\C
+
+absonava@PUNHWD12822 MINGW64 ~/D (master)
+$ git fetch C
+fatal: '..C' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+absonava@PUNHWD12822 MINGW64 ~/D (master)
+$ git fetch ..\C
+fatal: '..C' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+absonava@PUNHWD12822 MINGW64 ~/D (master)
+$ git info
+git: 'info' is not a git command. See 'git --help'.
+
+Did you mean one of these?
+        init
+        mailinfo
+
+absonava@PUNHWD12822 MINGW64 ~/D (master)
+$ git --help
+usage: git [--version] [--help] [-C <path>] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone      Clone a repository into a new directory
+   init       Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add        Add file contents to the index
+   mv         Move or rename a file, a directory, or a symlink
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect     Find by binary search the change that introduced a bug
+   grep       Print lines matching a pattern
+   log        Show commit logs
+   show       Show various types of objects
+   status     Show the working tree status
+
+grow, mark and tweak your common history
+   branch     List, create, or delete branches
+   checkout   Switch branches or restore working tree files
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   merge      Join two or more development histories together
+   rebase     Forward-port local commits to the updated upstream head
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch      Download objects and refs from another repository
+   pull       Fetch from and integrate with another repository or a local branch
+   push       Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+
+absonava@PUNHWD12822 MINGW64 ~/D (master)
+$ git fetch ..\C
+fatal: '..C' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+absonava@PUNHWD12822 MINGW64 ~/D (master)
+$ git fetch C
+fatal: '..C' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+absonava@PUNHWD12822 MINGW64 ~/D (master)
+$ git fetch C ..\C
+fatal: Invalid refspec '..C'
+
+absonava@PUNHWD12822 MINGW64 ~/D (master)
+$ git fetch C
+fatal: '..C' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+absonava@PUNHWD12822 MINGW64 ~/D (master)
+$ git remote add C ..\C
+fatal: remote C already exists.
+
+absonava@PUNHWD12822 MINGW64 ~/D (master)
+$ git fetch C
+fatal: '..C' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+absonava@PUNHWD12822 MINGW64 ~/D (master)
+$ cd ../c
+
+absonava@PUNHWD12822 MINGW64 ~/c (master)
+$ LS
+MyJavaCode.txt.txt  info.txt  tablescript.txt
+
+absonava@PUNHWD12822 MINGW64 ~/c (master)
+$ git remote add C ..\C
+
+absonava@PUNHWD12822 MINGW64 ~/c (master)
+$ CD ..
+bash: CD: command not found
+
+absonava@PUNHWD12822 MINGW64 ~/c (master)
+$ cd ..
+
+absonava@PUNHWD12822 MINGW64 ~ (Developement)
+$ ls
+AppData/           Desktop/         Music/                                                                                        NetHood@      SendTo@      demo/
+Application Data@  Documents/       My Documents@                                                                                 Oracle/       Start Menu@  hsperfdata_absonava/
+B/                 Downloads/       NTUSER.DAT                                                                                    Pictures/     Templates@   ntuser.dat.LOG1
+C/                 Favorites/       NTUSER.DAT{016888bd-6c6f-11de-8d1d-001e0bcde3ec}.TM.blf                                       PrintHood@    Videos/      ntuser.dat.LOG2
+Cookies@           Links/           NTUSER.DAT{016888bd-6c6f-11de-8d1d-001e0bcde3ec}.TMContainer00000000000000000001.regtrans-ms  Recent@       abhishek/    ntuser.ini
+D/                 Local Settings@  NTUSER.DAT{016888bd-6c6f-11de-8d1d-001e0bcde3ec}.TMContainer00000000000000000002.regtrans-ms  Saved Games/  create1/     ntuser.pol
+
+absonava@PUNHWD12822 MINGW64 ~ (Developement)
+$ cd D
+
+absonava@PUNHWD12822 MINGW64 ~/D (master)
+$ git remote add C ..\C
+fatal: remote C already exists.
+
+absonava@PUNHWD12822 MINGW64 ~/D (master)
+$ git fetch c
+fatal: 'c' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+absonava@PUNHWD12822 MINGW64 ~/D (master)
+$ git fetch C
+fatal: '..C' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+absonava@PUNHWD12822 MINGW64 ~/D (master)
+$ git remote add C ../C
+fatal: remote C already exists.
+
+absonava@PUNHWD12822 MINGW64 ~/D (master)
+$ git remote add C ~/C
+fatal: remote C already exists.
+
+absonava@PUNHWD12822 MINGW64 ~/D (master)
+$ rm -rf .git
+
+absonava@PUNHWD12822 MINGW64 ~/D (Developement)
+$ rm -rf .git
+
+absonava@PUNHWD12822 MINGW64 ~/D (Developement)
+$ ls
+MyJUnitTestCase.txt.txt  info.txt  tablescript.txt
+
+absonava@PUNHWD12822 MINGW64 ~/D (Developement)
+$ ls -a
+./  ../  MyJUnitTestCase.txt.txt  info.txt  tablescript.txt
+
+absonava@PUNHWD12822 MINGW64 ~/D (Developement)
+$ cd ..
+
+absonava@PUNHWD12822 MINGW64 ~ (Developement)
+$ rm -rf D
+
+absonava@PUNHWD12822 MINGW64 ~ (Developement)
+$ ls
+AppData/           Documents/       My Documents@                                                                                 Oracle/       Start Menu@  hsperfdata_absonava/
+Application Data@  Downloads/       NTUSER.DAT                                                                                    Pictures/     Templates@   ntuser.dat.LOG1
+B/                 Favorites/       NTUSER.DAT{016888bd-6c6f-11de-8d1d-001e0bcde3ec}.TM.blf                                       PrintHood@    Videos/      ntuser.dat.LOG2
+C/                 Links/           NTUSER.DAT{016888bd-6c6f-11de-8d1d-001e0bcde3ec}.TMContainer00000000000000000001.regtrans-ms  Recent@       abhishek/    ntuser.ini
+Cookies@           Local Settings@  NTUSER.DAT{016888bd-6c6f-11de-8d1d-001e0bcde3ec}.TMContainer00000000000000000002.regtrans-ms  Saved Games/  create1/     ntuser.pol
+Desktop/           Music/           NetHood@                                                                                      SendTo@       demo/
+
+absonava@PUNHWD12822 MINGW64 ~ (Developement)
+$ mkdir D
+
+absonava@PUNHWD12822 MINGW64 ~ (Developement)
+$ cd D
+
+absonava@PUNHWD12822 MINGW64 ~/D (Developement)
+$ git init
+Initialized empty Git repository in C:/Users/absonava/D/.git/
+
+absonava@PUNHWD12822 MINGW64 ~/D (master)
+$ git remote add C ~/C
+
+absonava@PUNHWD12822 MINGW64 ~/D (master)
+$ git fetch C
+remote: Counting objects: 12, done.
+remote: Compressing objects: 100% (8/8), done.
+remote: Total 12 (delta 0), reused 0 (delta 0)
+Unpacking objects: 100% (12/12), done.
+From C:/Users/absonava/C
+ * [new branch]      master     -> C/master
+
+absonava@PUNHWD12822 MINGW64 ~/D (master)
+$ git pull ^C
+
+absonava@PUNHWD12822 MINGW64 ~/D (master)
+$ git pull C Developement
+fatal: Couldn't find remote ref Developement
+fatal: The remote end hung up unexpectedly
+
+absonava@PUNHWD12822 MINGW64 ~/D (master)
+$ cd ..
+
+absonava@PUNHWD12822 MINGW64 ~ (Developement)
+$ git pull C
+remote: Counting objects: 12, done.
+remote: Compressing objects: 100% (8/8), done.
+remote: Total 12 (delta 0), reused 0 (delta 0)
+Unpacking objects: 100% (12/12), done.
+From C
+ * branch            HEAD       -> FETCH_HEAD
+fatal: Unable to create 'C:/Users/absonava/.git/index.lock': File exists.
+
+If no other git process is currently running, this probably means a
+git process crashed in this repository earlier. Make sure no other git
+process is running and remove the file manually to continue.
+
+absonava@PUNHWD12822 MINGW64 ~ (Developement)
+$ cd D
+
+absonava@PUNHWD12822 MINGW64 ~/D (master)
+$ git pull C developement
+fatal: Couldn't find remote ref developement
+fatal: The remote end hung up unexpectedly
+
+absonava@PUNHWD12822 MINGW64 ~/D (master)
+$ git branch
+
+absonava@PUNHWD12822 MINGW64 ~/D (master)
+$ cd ../C
+
+absonava@PUNHWD12822 MINGW64 ~/C (master)
+$ git branch
+* master
+
+absonava@PUNHWD12822 MINGW64 ~/C (master)
+$ cd ..
+
+absonava@PUNHWD12822 MINGW64 ~ (Developement)
+$ cd D
+
+absonava@PUNHWD12822 MINGW64 ~/D (master)
+$ git pull C
+You asked to pull from the remote 'C', but did not specify
+a branch. Because this is not the default configured remote
+for your current branch, you must specify a branch on the command line.
+
+absonava@PUNHWD12822 MINGW64 ~/D (master)
+$ git pull C master
+From C:/Users/absonava/C
+ * branch            master     -> FETCH_HEAD
+
+absonava@PUNHWD12822 MINGW64 ~/D (master)
+$ git add .
+
+absonava@PUNHWD12822 MINGW64 ~/D (master)
+$ git commit -m "dg"
+[master 3ddeb66] dg
+ Committer: unknown <absonava@PUNHWD12822.corp.capgemini.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 2 files changed, 1 insertion(+), 1 deletion(-)
+ create mode 100644 test.txt.txt
+
+absonava@PUNHWD12822 MINGW64 ~/D (master)
+$ git push -u origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+absonava@PUNHWD12822 MINGW64 ~/D (master)
+$ git remote add origin https://github.com/absonavane/git.git
+
+absonava@PUNHWD12822 MINGW64 ~/D (master)
+$ git push -u origin master
+Username for 'https://github.com': absonavane
+Password for 'https://absonavane@github.com':
+Counting objects: 7, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (7/7), 673 bytes | 0 bytes/s, done.
+Total 7 (delta 0), reused 0 (delta 0)
+To https://github.com/absonavane/git.git
+   9d306ab..3ddeb66  master -> master
+Branch master set up to track remote branch master from origin.
+
+absonava@PUNHWD12822 MINGW64 ~/D (master)
+$ cd ../C
+
+absonava@PUNHWD12822 MINGW64 ~/C (master)
+$ git pull -u origin master
+error: unknown switch `u'
+usage: git pull [options] [<repository> [<refspec>...]]
+    Fetch one or more remote refs and integrate it/them with the current HEAD.
+
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --progress            force progress reporting
+
+Options related to merging
+    -r, --rebase[=<false|true|preserve>]
+                          incorporate changes by rebasing rather than merging
+    -n                    do not show a diffstat at the end of the merge
+    --stat                show a diffstat at the end of the merge
+    --summary             (synonym to --stat)
+    --log[=<n>]           add (at most <n>) entries from shortlog to merge commit message
+    --squash              create a single commit instead of doing a merge
+    --commit              perform a commit if the merge succeeds (default)
+    -e, --edit            edit message before committing
+    --ff                  allow fast-forward
+    --ff-only             abort if fast-forward is not possible
+    --verify-signatures   verify that the named commit has a valid GPG signature
+    -s, --strategy <strategy>
+                          merge strategy to use
+    -X, --strategy-option <option>
+                          option for selected merge strategy
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+
+Options related to fetching
+    --all                 fetch from all remotes
+    -a, --append          append to .git/FETCH_HEAD instead of overwriting
+    --upload-pack <path>  path to upload pack on remote end
+    -f, --force           force overwrite of local branch
+    -t, --tags            fetch all tags and associated objects
+    -p, --prune           prune remote-tracking branches no longer on remote
+    --recurse-submodules[=<on-demand>]
+                          control recursive fetching of submodules
+    --dry-run             dry run
+    -k, --keep            keep downloaded pack
+    --depth <depth>       deepen history of shallow clone
+    --unshallow           convert to a complete repository
+    --update-shallow      accept refs that update .git/shallow
+    --refmap <refmap>     specify fetch refmap
+
+
+absonava@PUNHWD12822 MINGW64 ~/C (master)
+$ git pull origin master
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 4 (delta 0), reused 4 (delta 0), pack-reused 0
+Unpacking objects: 100% (4/4), done.
+From https://github.com/absonavane/git
+ * branch            master     -> FETCH_HEAD
+ * [new branch]      master     -> origin/master
+Updating eea5b7f..3ddeb66
+Fast-forward
+ MyJavaCode.txt.txt | 2 +-
+ test.txt.txt       | 0
+ 2 files changed, 1 insertion(+), 1 deletion(-)
+ create mode 100644 test.txt.txt
+
+absonava@PUNHWD12822 MINGW64 ~/C (master)
+$ cd ./D
+bash: cd: ./D: No such file or directory
+
+absonava@PUNHWD12822 MINGW64 ~/C (master)
+$ cd ../D
+
+absonava@PUNHWD12822 MINGW64 ~/D (master)
+$ git add .
+
+absonava@PUNHWD12822 MINGW64 ~/D (master)
+$ git commit -m "diuhggd"
+[master 396fb6c] diuhggd
+ Committer: unknown <absonava@PUNHWD12822.corp.capgemini.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+absonava@PUNHWD12822 MINGW64 ~/D (master)
+$ git push -u origin master
+Username for 'https://github.com': absonavane
+Password for 'https://absonavane@github.com':
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 282 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/absonavane/git.git
+   3ddeb66..396fb6c  master -> master
+Branch master set up to track remote branch master from origin.
+
+absonava@PUNHWD12822 MINGW64 ~/D (master)
+$ cd ../C
+
+absonava@PUNHWD12822 MINGW64 ~/C (master)
+$ git pull origin master
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (1/1), done.
+remote: Total 3 (delta 1), reused 3 (delta 1), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/absonavane/git
+ * branch            master     -> FETCH_HEAD
+   3ddeb66..396fb6c  master     -> origin/master
+Updating 3ddeb66..396fb6c
+Fast-forward
+ MyJavaCode.txt.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+absonava@PUNHWD12822 MINGW64 ~/C (master)
+$ ^C
+
+absonava@PUNHWD12822 MINGW64 ~/C (master)
+$
