@@ -1,0 +1,1302 @@
+
+ayadav33@PUNHWD12792 MINGW64 ~
+$ git
+usage: git [--version] [--help] [-C <path>] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone      Clone a repository into a new directory
+   init       Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add        Add file contents to the index
+   mv         Move or rename a file, a directory, or a symlink
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect     Find by binary search the change that introduced a bug
+   grep       Print lines matching a pattern
+   log        Show commit logs
+   show       Show various types of objects
+   status     Show the working tree status
+
+grow, mark and tweak your common history
+   branch     List, create, or delete branches
+   checkout   Switch branches or restore working tree files
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   merge      Join two or more development histories together
+   rebase     Forward-port local commits to the updated upstream head
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch      Download objects and refs from another repository
+   pull       Fetch from and integrate with another repository or a local branch
+   push       Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+
+ayadav33@PUNHWD12792 MINGW64 ~
+$ git --version
+git version 2.5.0.windows.1
+
+ayadav33@PUNHWD12792 MINGW64 ~
+$ mkdir demo1
+
+ayadav33@PUNHWD12792 MINGW64 ~
+$ cd demo1
+
+ayadav33@PUNHWD12792 MINGW64 ~/demo1
+$ echo "# github" >> README.md
+
+ayadav33@PUNHWD12792 MINGW64 ~/demo1
+$ git init
+Initialized empty Git repository in C:/Users/ayadav33/demo1/.git/
+
+ayadav33@PUNHWD12792 MINGW64 ~/demo1 (master)
+$ git add README.md
+warning: LF will be replaced by CRLF in README.md.
+The file will have its original line endings in your working directory.
+
+ayadav33@PUNHWD12792 MINGW64 ~/demo1 (master)
+$ echo "# github" >> amit.txt
+
+ayadav33@PUNHWD12792 MINGW64 ~/demo1 (master)
+$ git init
+Reinitialized existing Git repository in C:/Users/ayadav33/demo1/.git/
+
+ayadav33@PUNHWD12792 MINGW64 ~/demo1 (master)
+$ git add amit.txt
+warning: LF will be replaced by CRLF in amit.txt.
+The file will have its original line endings in your working directory.
+
+ayadav33@PUNHWD12792 MINGW64 ~/demo1 (master)
+$ git commit -m "first commit"
+[master (root-commit) 49cf840] first commit
+ Committer: unknown <ayadav33@PUNHWD12792.corp.capgemini.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+warning: LF will be replaced by CRLF in README.md.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in amit.txt.
+The file will have its original line endings in your working directory.
+ 2 files changed, 2 insertions(+)
+ create mode 100644 README.md
+ create mode 100644 amit.txt
+
+ayadav33@PUNHWD12792 MINGW64 ~/demo1 (master)
+$ git remote add origin git@github.com.amity333/github.git
+
+ayadav33@PUNHWD12792 MINGW64 ~/demo1 (master)
+$ git push -u origin master
+fatal: 'git@github.com.amity333/github.git' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+ayadav33@PUNHWD12792 MINGW64 ~/demo1 (master)
+$ git remote add origin https://github.com/amity333/github.git
+fatal: remote origin already exists.
+
+ayadav33@PUNHWD12792 MINGW64 ~/demo1 (master)
+$ git push -u origin master
+fatal: 'git@github.com.amity333/github.git' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+ayadav33@PUNHWD12792 MINGW64 ~/demo1 (master)
+$ echo "# github" >> hello.txt
+
+ayadav33@PUNHWD12792 MINGW64 ~/demo1 (master)
+$ git init
+Reinitialized existing Git repository in C:/Users/ayadav33/demo1/.git/
+
+ayadav33@PUNHWD12792 MINGW64 ~/demo1 (master)
+$ git add hello.txt
+warning: LF will be replaced by CRLF in hello.txt.
+The file will have its original line endings in your working directory.
+
+ayadav33@PUNHWD12792 MINGW64 ~/demo1 (master)
+$ git commit -m "first commit"
+[master 796a658] first commit
+ Committer: unknown <ayadav33@PUNHWD12792.corp.capgemini.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+warning: LF will be replaced by CRLF in hello.txt.
+The file will have its original line endings in your working directory.
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello.txt
+
+ayadav33@PUNHWD12792 MINGW64 ~/demo1 (master)
+$ git remote add origin git@github.com:amity333/hellogit.git
+fatal: remote origin already exists.
+
+ayadav33@PUNHWD12792 MINGW64 ~/demo1 (master)
+$ git remote add origin1 git@github.com:amity333/hellogit.git
+
+ayadav33@PUNHWD12792 MINGW64 ~/demo1 (master)
+$ git push -u origin1 master
+The authenticity of host 'github.com (140.82.118.3)' can't be established.
+RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'github.com,140.82.118.3' (RSA) to the list of known hosts.
+Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+ayadav33@PUNHWD12792 MINGW64 ~/demo1 (master)
+$ git remote add origin2 https://github.com/amity333/hellogit.git
+
+ayadav33@PUNHWD12792 MINGW64 ~/demo1 (master)
+$ git push -u origin2 master
+fatal: unable to access 'https://github.com/amity333/hellogit.git/': Failed to connect to github.com port 443: Connection refused
+
+ayadav33@PUNHWD12792 MINGW64 ~/demo1 (master)
+$ git config --global http.proxy http://10.102.22.17:8080
+
+ayadav33@PUNHWD12792 MINGW64 ~/demo1 (master)
+$ git push -u origin2 master
+Username for 'https://github.com': amity333
+Password for 'https://amity333@github.com':
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 401 bytes | 0 bytes/s, done.
+Total 5 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), done.
+To https://github.com/amity333/hellogit.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin2.
+
+ayadav33@PUNHWD12792 MINGW64 ~/demo1 (master)
+$ cd ..
+
+ayadav33@PUNHWD12792 MINGW64 ~
+$ mkdir B
+
+ayadav33@PUNHWD12792 MINGW64 ~
+$ git init
+Initialized empty Git repository in C:/Users/ayadav33/.git/
+
+ayadav33@PUNHWD12792 MINGW64 ~ (master)
+$ cd B
+
+ayadav33@PUNHWD12792 MINGW64 ~/B (master)
+$ git init
+Initialized empty Git repository in C:/Users/ayadav33/B/.git/
+
+ayadav33@PUNHWD12792 MINGW64 ~/B (master)
+$ cd ..
+
+ayadav33@PUNHWD12792 MINGW64 ~ (master)
+$ mkdir C
+
+ayadav33@PUNHWD12792 MINGW64 ~ (master)
+$ cd C
+
+ayadav33@PUNHWD12792 MINGW64 ~/C (master)
+$ git init
+Initialized empty Git repository in C:/Users/ayadav33/C/.git/
+
+ayadav33@PUNHWD12792 MINGW64 ~/C (master)
+$ cd ..
+
+ayadav33@PUNHWD12792 MINGW64 ~ (master)
+$ mkdir D
+
+ayadav33@PUNHWD12792 MINGW64 ~ (master)
+$ cd D
+
+ayadav33@PUNHWD12792 MINGW64 ~/D (master)
+$ git init
+Initialized empty Git repository in C:/Users/ayadav33/D/.git/
+
+ayadav33@PUNHWD12792 MINGW64 ~/D (master)
+$ cd ../B
+
+ayadav33@PUNHWD12792 MINGW64 ~/B (master)
+$ add info.txt
+bash: add: command not found
+
+ayadav33@PUNHWD12792 MINGW64 ~/B (master)
+$ git add info.txt
+
+ayadav33@PUNHWD12792 MINGW64 ~/B (master)
+$ git commit -m "commit"
+[master (root-commit) 1136b5d] commit
+ Committer: unknown <ayadav33@PUNHWD12792.corp.capgemini.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+ create mode 100644 info.txt
+
+ayadav33@PUNHWD12792 MINGW64 ~/B (master)
+$ git branch development
+
+ayadav33@PUNHWD12792 MINGW64 ~/B (master)
+$ git branch
+  development
+* master
+
+ayadav33@PUNHWD12792 MINGW64 ~/B (master)
+$ git branch testing
+
+ayadav33@PUNHWD12792 MINGW64 ~/B (master)
+$ git branch
+  development
+* master
+  testing
+
+ayadav33@PUNHWD12792 MINGW64 ~/B (master)
+$ git push -u origin development
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+ayadav33@PUNHWD12792 MINGW64 ~/B (master)
+$ git push -u origin2 development
+fatal: 'origin2' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+ayadav33@PUNHWD12792 MINGW64 ~/B (master)
+$ git remote add origin https://github.com/absonavane/git.git
+
+ayadav33@PUNHWD12792 MINGW64 ~/B (master)
+$ git remote add origin2 https://github.com/absonavane/git.git
+
+ayadav33@PUNHWD12792 MINGW64 ~/B (master)
+$ git push -u origin2 development
+Username for 'https://github.com': amity333
+Password for 'https://amity333@github.com':
+remote: Permission to absonavane/git.git denied to amity333.
+fatal: unable to access 'https://github.com/absonavane/git.git/': The requested URL returned error: 403
+
+ayadav33@PUNHWD12792 MINGW64 ~/B (master)
+$ git remote add origin2 https://github.com/amity333/hellogit.git
+fatal: remote origin2 already exists.
+
+ayadav33@PUNHWD12792 MINGW64 ~/B (master)
+$ git remote add origin3 https://github.com/amity333/hellogit.git
+
+ayadav33@PUNHWD12792 MINGW64 ~/B (master)
+$ git push -u origin3 development
+Username for 'https://github.com': amity333
+Password for 'https://amity333@github.com':
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 231 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+remote:
+remote: Create a pull request for 'development' on GitHub by visiting:
+remote:      https://github.com/amity333/hellogit/pull/new/development
+remote:
+To https://github.com/amity333/hellogit.git
+ * [new branch]      development -> development
+Branch development set up to track remote branch development from origin3.
+
+ayadav33@PUNHWD12792 MINGW64 ~/B (master)
+$ cd ../C
+
+ayadav33@PUNHWD12792 MINGW64 ~/C (master)
+$ git pull
+fatal: No remote repository specified.  Please, specify either a URL or a
+remote name from which new revisions should be fetched.
+
+ayadav33@PUNHWD12792 MINGW64 ~/C (master)
+$ git remote add origin3 https://github.com/amity333/hellogit.git
+
+ayadav33@PUNHWD12792 MINGW64 ~/C (master)
+$ git pull
+fatal: No remote repository specified.  Please, specify either a URL or a
+remote name from which new revisions should be fetched.
+
+ayadav33@PUNHWD12792 MINGW64 ~/C (master)
+$ git pull origin3 development
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/amity333/hellogit
+ * branch            development -> FETCH_HEAD
+ * [new branch]      development -> origin3/development
+
+ayadav33@PUNHWD12792 MINGW64 ~/C (master)
+$ cd ../D
+
+ayadav33@PUNHWD12792 MINGW64 ~/D (master)
+$ git pull origin3 testing
+fatal: 'origin3' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+ayadav33@PUNHWD12792 MINGW64 ~/D (master)
+$ git remote add origin3 https://github.com/amity333/hellogit.git
+
+ayadav33@PUNHWD12792 MINGW64 ~/D (master)
+$ git pull origin3 testing
+fatal: Couldn't find remote ref testing
+
+ayadav33@PUNHWD12792 MINGW64 ~/D (master)
+$ cd ../B
+
+ayadav33@PUNHWD12792 MINGW64 ~/B (master)
+$ git push -u origin3 testing
+Username for 'https://github.com': amity333
+Password for 'https://amity333@github.com':
+Total 0 (delta 0), reused 0 (delta 0)
+remote:
+remote: Create a pull request for 'testing' on GitHub by visiting:
+remote:      https://github.com/amity333/hellogit/pull/new/testing
+remote:
+To https://github.com/amity333/hellogit.git
+ * [new branch]      testing -> testing
+Branch testing set up to track remote branch testing from origin3.
+
+ayadav33@PUNHWD12792 MINGW64 ~/B (master)
+$ cd ../D
+
+ayadav33@PUNHWD12792 MINGW64 ~/D (master)
+$ git pull origin3 testing
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/amity333/hellogit
+ * branch            testing    -> FETCH_HEAD
+ * [new branch]      testing    -> origin3/testing
+
+ayadav33@PUNHWD12792 MINGW64 ~/D (master)
+$ git add MyJUnitTestcase.txt
+
+ayadav33@PUNHWD12792 MINGW64 ~/D (master)
+$ git commit -m "commit file in D"
+On branch master
+Untracked files:
+        MyJUnitTestCase.txt
+
+nothing added to commit but untracked files present
+
+ayadav33@PUNHWD12792 MINGW64 ~/D (master)
+$ git add MyJUnitTestCase.txt
+
+ayadav33@PUNHWD12792 MINGW64 ~/D (master)
+$ git commit -m "commit file in D"
+[master 3336769] commit file in D
+ Committer: unknown <ayadav33@PUNHWD12792.corp.capgemini.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+ create mode 100644 MyJUnitTestCase.txt
+
+ayadav33@PUNHWD12792 MINGW64 ~/D (master)
+$ cd ../C
+
+ayadav33@PUNHWD12792 MINGW64 ~/C (master)
+$ git add MyJavaCode.txt
+
+ayadav33@PUNHWD12792 MINGW64 ~/C (master)
+$ git commit -m "commit file in C"
+[master de564e2] commit file in C
+ Committer: unknown <ayadav33@PUNHWD12792.corp.capgemini.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+ create mode 100644 MyJavaCode.txt
+
+ayadav33@PUNHWD12792 MINGW64 ~/C (master)
+$ cd ../D
+
+ayadav33@PUNHWD12792 MINGW64 ~/D (master)
+$  git remote add C ~/C
+
+ayadav33@PUNHWD12792 MINGW64 ~/D (master)
+$ git fetch C
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0)
+Unpacking objects: 100% (3/3), done.
+From C:/Users/ayadav33/C
+ * [new branch]      master     -> C/master
+
+ayadav33@PUNHWD12792 MINGW64 ~/D (master)
+$ git pull C development
+fatal: Couldn't find remote ref development
+fatal: The remote end hung up unexpectedly
+
+ayadav33@PUNHWD12792 MINGW64 ~/D (master)
+$ git pull C master
+From C:/Users/ayadav33/C
+ * branch            master     -> FETCH_HEAD
+Merge made by the 'recursive' strategy.
+ MyJavaCode.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 MyJavaCode.txt
+
+ayadav33@PUNHWD12792 MINGW64 ~/D (master)
+$ git add MyJavaCode.txt
+
+ayadav33@PUNHWD12792 MINGW64 ~/D (master)
+$ git commit -m "commit javafile in D"
+[master 239b82a] commit javafile in D
+ Committer: unknown <ayadav33@PUNHWD12792.corp.capgemini.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+ayadav33@PUNHWD12792 MINGW64 ~/D (master)
+$ git branch
+* master
+
+ayadav33@PUNHWD12792 MINGW64 ~/D (master)
+$ git push -u origin3 master
+Username for 'https://github.com': amity333
+Password for 'https://amity333@github.com':
+To https://github.com/amity333/hellogit.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/amity333/hellogit.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+ayadav33@PUNHWD12792 MINGW64 ~/D (master)
+$ git remote add origin3 https://github.com/amity333/hellogit.git
+fatal: remote origin3 already exists.
+
+ayadav33@PUNHWD12792 MINGW64 ~/D (master)
+$ git push https://github.com/amity333/hellogit.git
+warning: push.default is unset; its implicit value has changed in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the traditional behavior, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+Since Git 2.0, Git defaults to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream https://github.com/amity333/hellogit.git master
+
+
+ayadav33@PUNHWD12792 MINGW64 ~/D (master)
+$ git push https://github.com/amity333/hellogit.git master
+Username for 'https://github.com': amity333
+Password for 'https://amity333@github.com':
+To https://github.com/amity333/hellogit.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/amity333/hellogit.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+ayadav33@PUNHWD12792 MINGW64 ~/D (master)
+$ git push https://github.com/amity333/hellogit.git
+warning: push.default is unset; its implicit value has changed in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the traditional behavior, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+Since Git 2.0, Git defaults to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream https://github.com/amity333/hellogit.git master
+
+
+ayadav33@PUNHWD12792 MINGW64 ~/D (master)
+$ git push https://github.com/amity333/hellogit.git
+warning: push.default is unset; its implicit value has changed in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the traditional behavior, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+Since Git 2.0, Git defaults to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream https://github.com/amity333/hellogit.git master
+
+
+ayadav33@PUNHWD12792 MINGW64 ~/D (master)
+$ git push https://github.com/amity333/hellogit.git
+warning: push.default is unset; its implicit value has changed in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the traditional behavior, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+Since Git 2.0, Git defaults to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream https://github.com/amity333/hellogit.git master
+
+
+ayadav33@PUNHWD12792 MINGW64 ~/D (master)
+$ git push https://github.com/amity333/hellogit.git master
+Username for 'https://github.com': amity333
+Password for 'https://amity333@github.com':
+To https://github.com/amity333/hellogit.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/amity333/hellogit.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+ayadav33@PUNHWD12792 MINGW64 ~/D (master)
+$ cd ..
+
+ayadav33@PUNHWD12792 MINGW64 ~ (master)
+$ cd B
+
+ayadav33@PUNHWD12792 MINGW64 ~/B (master)
+$ git init
+Initialized empty Git repository in C:/Users/ayadav33/B/.git/
+
+ayadav33@PUNHWD12792 MINGW64 ~/B (master)
+$ git remote add origin https://github.com/amity333/A.git
+
+ayadav33@PUNHWD12792 MINGW64 ~/B (master)
+$ echo "Project" >> info.txt
+
+ayadav33@PUNHWD12792 MINGW64 ~/B (master)
+$ git add info.txt
+warning: LF will be replaced by CRLF in info.txt.
+The file will have its original line endings in your working directory.
+
+ayadav33@PUNHWD12792 MINGW64 ~/B (master)
+$ git commit -m "commit"
+[master (root-commit) 2e958bd] commit
+ Committer: unknown <ayadav33@PUNHWD12792.corp.capgemini.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+warning: LF will be replaced by CRLF in info.txt.
+The file will have its original line endings in your working directory.
+ 1 file changed, 1 insertion(+)
+ create mode 100644 info.txt
+
+ayadav33@PUNHWD12792 MINGW64 ~/B (master)
+$ git push -u origin master
+Username for 'https://github.com': amity333
+Password for 'https://amity333@github.com':
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 232 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/amity333/A.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+
+ayadav33@PUNHWD12792 MINGW64 ~/B (master)
+$ git branch development
+
+ayadav33@PUNHWD12792 MINGW64 ~/B (master)
+$ git branch testing
+
+ayadav33@PUNHWD12792 MINGW64 ~/B (master)
+$ git push origin development
+Username for 'https://github.com': amity333
+Password for 'https://amity333@github.com':
+Total 0 (delta 0), reused 0 (delta 0)
+remote:
+remote: Create a pull request for 'development' on GitHub by visiting:
+remote:      https://github.com/amity333/A/pull/new/development
+remote:
+To https://github.com/amity333/A.git
+ * [new branch]      development -> development
+
+ayadav33@PUNHWD12792 MINGW64 ~/B (master)
+$ git push origin testing
+Username for 'https://github.com': amity333
+Password for 'https://amity333@github.com':
+Total 0 (delta 0), reused 0 (delta 0)
+remote:
+remote: Create a pull request for 'testing' on GitHub by visiting:
+remote:      https://github.com/amity333/A/pull/new/testing
+remote:
+To https://github.com/amity333/A.git
+ * [new branch]      testing -> testing
+
+ayadav33@PUNHWD12792 MINGW64 ~/B (master)
+$ cd ../C
+
+ayadav33@PUNHWD12792 MINGW64 ~/C (master)
+$ echo "amit" >> MyJavaCode.txt
+
+ayadav33@PUNHWD12792 MINGW64 ~/C (master)
+$ git init
+Initialized empty Git repository in C:/Users/ayadav33/C/.git/
+
+ayadav33@PUNHWD12792 MINGW64 ~/C (master)
+$ git remote add origin https://github.com/amity333/A.git
+
+ayadav33@PUNHWD12792 MINGW64 ~/C (master)
+$ git add MyJavaCode.txt
+warning: LF will be replaced by CRLF in MyJavaCode.txt.
+The file will have its original line endings in your working directory.
+
+ayadav33@PUNHWD12792 MINGW64 ~/C (master)
+$ git commit -m "commit java file"
+[master (root-commit) 4454d77] commit java file
+ Committer: unknown <ayadav33@PUNHWD12792.corp.capgemini.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+warning: LF will be replaced by CRLF in MyJavaCode.txt.
+The file will have its original line endings in your working directory.
+ 1 file changed, 1 insertion(+)
+ create mode 100644 MyJavaCode.txt
+
+ayadav33@PUNHWD12792 MINGW64 ~/C (master)
+$ cd ../D
+
+ayadav33@PUNHWD12792 MINGW64 ~/D (master)
+$ echo "yadav" >> MyJUnitTestCase.txt
+
+ayadav33@PUNHWD12792 MINGW64 ~/D (master)
+$ git init
+Initialized empty Git repository in C:/Users/ayadav33/D/.git/
+
+ayadav33@PUNHWD12792 MINGW64 ~/D (master)
+$ git remote add origin https://github.com/amity333/A.git
+
+ayadav33@PUNHWD12792 MINGW64 ~/D (master)
+$ git add MyJUnitTestCase.txt
+warning: LF will be replaced by CRLF in MyJUnitTestCase.txt.
+The file will have its original line endings in your working directory.
+
+ayadav33@PUNHWD12792 MINGW64 ~/D (master)
+$ git commit -m "commit junit file"
+[master (root-commit) 4a44dbb] commit junit file
+ Committer: unknown <ayadav33@PUNHWD12792.corp.capgemini.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+warning: LF will be replaced by CRLF in MyJUnitTestCase.txt.
+The file will have its original line endings in your working directory.
+ 1 file changed, 1 insertion(+)
+ create mode 100644 MyJUnitTestCase.txt
+
+ayadav33@PUNHWD12792 MINGW64 ~/D (master)
+$ git pull ../C
+warning: no common commits
+remote: Counting objects: 3, done.
+remote: Total 3 (delta 0), reused 0 (delta 0)
+Unpacking objects: 100% (3/3), done.
+From ../C
+ * branch            HEAD       -> FETCH_HEAD
+Merge made by the 'recursive' strategy.
+ MyJavaCode.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 MyJavaCode.txt
+
+ayadav33@PUNHWD12792 MINGW64 ~/D (master)
+$ git add .
+
+ayadav33@PUNHWD12792 MINGW64 ~/D (master)
+$ git commit -m "commit java  file in D"
+[master 8565e6d] commit java  file in D
+ Committer: unknown <ayadav33@PUNHWD12792.corp.capgemini.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+ayadav33@PUNHWD12792 MINGW64 ~/D (master)
+$ git push https://github.com/amity333/A.git
+warning: push.default is unset; its implicit value has changed in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the traditional behavior, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+Since Git 2.0, Git defaults to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Username for 'https://github.com': amity333
+Password for 'https://amity333@github.com':
+To https://github.com/amity333/A.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/amity333/A.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+ayadav33@PUNHWD12792 MINGW64 ~/D (master)
+$ $ https://github.com/amity333/A.git
+bash: $: command not found
+
+ayadav33@PUNHWD12792 MINGW64 ~/D (master)
+$ git rebase master
+Current branch master is up to date.
+
+ayadav33@PUNHWD12792 MINGW64 ~/D (master)
+$ git push https://github.com/amity333/A.git
+warning: push.default is unset; its implicit value has changed in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the traditional behavior, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+Since Git 2.0, Git defaults to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Username for 'https://github.com': amity333
+Password for 'https://amity333@github.com':
+To https://github.com/amity333/A.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/amity333/A.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+ayadav33@PUNHWD12792 MINGW64 ~/D (master)
+$ git push -u origin master
+Username for 'https://github.com': amity333
+Password for 'https://amity333@github.com':
+To https://github.com/amity333/A.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/amity333/A.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+ayadav33@PUNHWD12792 MINGW64 ~/D (master)
+$ git fetch master
+fatal: 'master' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+ayadav33@PUNHWD12792 MINGW64 ~/D (master)
+$ git fetch failed to push some refs to 'https://github.com/amity333/A.git'
+fatal: Invalid refspec 'https://github.com/amity333/A.git'
+
+ayadav33@PUNHWD12792 MINGW64 ~/D (master)
+$ git fetch https://github.com/amity333/A.git master
+warning: no common commits
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/amity333/A
+ * branch            master     -> FETCH_HEAD
+
+ayadav33@PUNHWD12792 MINGW64 ~/D (master)
+$ git push -u origin master
+Username for 'https://github.com': amity333
+Password for 'https://amity333@github.com':
+To https://github.com/amity333/A.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/amity333/A.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+ayadav33@PUNHWD12792 MINGW64 ~/D (master)
+$ git push https://github.com/amity333/A.git master
+Username for 'https://github.com': amity333
+Password for 'https://amity333@github.com':
+To https://github.com/amity333/A.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/amity333/A.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+ayadav33@PUNHWD12792 MINGW64 ~/D (master)
+$ git init
+Reinitialized existing Git repository in C:/Users/ayadav33/D/.git/
+
+ayadav33@PUNHWD12792 MINGW64 ~/D (master)
+$ git push https://github.com/amity333/A.git master
+Username for 'https://github.com': amity333
+Password for 'https://amity333@github.com':
+To https://github.com/amity333/A.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/amity333/A.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+ayadav33@PUNHWD12792 MINGW64 ~/D (master)
+$ cd ../C
+
+ayadav33@PUNHWD12792 MINGW64 ~/C (master)
+$ git branch
+* master
+
+ayadav33@PUNHWD12792 MINGW64 ~/C (master)
+$ cd ../D
+
+ayadav33@PUNHWD12792 MINGW64 ~/D (master)
+$ git fetch origin
+From https://github.com/amity333/A
+ * [new branch]      development -> origin/development
+ * [new branch]      master     -> origin/master
+ * [new branch]      testing    -> origin/testing
+
+ayadav33@PUNHWD12792 MINGW64 ~/D (master)
+$ git merge origin master
+merge: origin - not something we can merge
+
+ayadav33@PUNHWD12792 MINGW64 ~/D (master)
+$ git push https://github.com/amity333/A.git master
+Username for 'https://github.com': amity333
+Password for 'https://amity333@github.com':
+To https://github.com/amity333/A.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/amity333/A.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+ayadav33@PUNHWD12792 MINGW64 ~/D (master)
+$ cd ../C
+
+ayadav33@PUNHWD12792 MINGW64 ~/C (master)
+$ cd ../D
+
+ayadav33@PUNHWD12792 MINGW64 ~/D (master)
+$ git add MyJavaCode.txt
+
+ayadav33@PUNHWD12792 MINGW64 ~/D (master)
+$ git commit -m "commit"
+On branch master
+nothing to commit, working directory clean
+
+ayadav33@PUNHWD12792 MINGW64 ~/D (master)
+$ git push https://github.com/amity333/A.git master
+Username for 'https://github.com': amity333
+Password for 'https://amity333@github.com':
+To https://github.com/amity333/A.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/amity333/A.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+ayadav33@PUNHWD12792 MINGW64 ~/D (master)
+$ git remote add https://github.com/amity333/A.git
+usage: git remote add [<options>] <name> <url>
+
+    -f, --fetch           fetch the remote branches
+    --tags                import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --track <branch>  branch(es) to track
+    -m, --master <branch>
+                          master branch
+    --mirror[=<push|fetch>]
+                          set up remote as a mirror to push to or fetch from
+
+
+ayadav33@PUNHWD12792 MINGW64 ~/D (master)
+$ git branch
+* master
+
+ayadav33@PUNHWD12792 MINGW64 ~/D (master)
+$ git pull https://github.com/amity333/A.git testing
+From https://github.com/amity333/A
+ * branch            testing    -> FETCH_HEAD
+Merge made by the 'recursive' strategy.
+ info.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 info.txt
+
+ayadav33@PUNHWD12792 MINGW64 ~/D (master)
+$ cd ../C
+
+ayadav33@PUNHWD12792 MINGW64 ~/C (master)
+$ git pull https://github.com/amity333/A.git development
+warning: no common commits
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/amity333/A
+ * branch            development -> FETCH_HEAD
+Merge made by the 'recursive' strategy.
+ info.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 info.txt
+
+ayadav33@PUNHWD12792 MINGW64 ~/C (master)
+$ cd ../D
+
+ayadav33@PUNHWD12792 MINGW64 ~/D (master)
+$ git pull ../C
+remote: Counting objects: 2, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 2 (delta 0), reused 0 (delta 0)
+Unpacking objects: 100% (2/2), done.
+From ../C
+ * branch            HEAD       -> FETCH_HEAD
+Already up-to-date!
+Merge made by the 'recursive' strategy.
+
+ayadav33@PUNHWD12792 MINGW64 ~/D (master)
+$ git add .
+
+ayadav33@PUNHWD12792 MINGW64 ~/D (master)
+$ git commit -m "abc"
+On branch master
+nothing to commit, working directory clean
+
+ayadav33@PUNHWD12792 MINGW64 ~/D (master)
+$ git push https://github.com/amity333/A.git
+warning: push.default is unset; its implicit value has changed in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the traditional behavior, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+Since Git 2.0, Git defaults to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Username for 'https://github.com': amity333
+Password for 'https://amity333@github.com':
+Counting objects: 16, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (11/11), done.
+Writing objects: 100% (16/16), 1.54 KiB | 0 bytes/s, done.
+Total 16 (delta 5), reused 0 (delta 0)
+remote: Resolving deltas: 100% (5/5), done.
+To https://github.com/amity333/A.git
+   2e958bd..5dcb425  master -> master
+
+ayadav33@PUNHWD12792 MINGW64 ~/D (master)
+$ git add .
+
+ayadav33@PUNHWD12792 MINGW64 ~/D (master)
+$ git commit -m "abcd"
+On branch master
+nothing to commit, working directory clean
+
+ayadav33@PUNHWD12792 MINGW64 ~/D (master)
+$ git pull https://github.com/amity333/A.git
+From https://github.com/amity333/A
+ * branch            HEAD       -> FETCH_HEAD
+Already up-to-date.
+
+ayadav33@PUNHWD12792 MINGW64 ~/D (master)
+$ cd ../C
+
+ayadav33@PUNHWD12792 MINGW64 ~/C (master)
+$ git add .
+warning: LF will be replaced by CRLF in MyJavaCode.txt.
+The file will have its original line endings in your working directory.
+
+ayadav33@PUNHWD12792 MINGW64 ~/C (master)
+$ git commit -m ""
+Aborting commit due to empty commit message.
+
+ayadav33@PUNHWD12792 MINGW64 ~/C (master)
+$ git commit -m "abcd"
+[master warning: LF will be replaced by CRLF in MyJavaCode.txt.
+The file will have its original line endings in your working directory.
+56d37b2] abcd
+ Committer: unknown <ayadav33@PUNHWD12792.corp.capgemini.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+warning: LF will be replaced by CRLF in MyJavaCode.txt.
+The file will have its original line endings in your working directory.
+ 1 file changed, 1 insertion(+)
+
+ayadav33@PUNHWD12792 MINGW64 ~/C (master)
+$ git pull https://github.com/amity333/A.git
+remote: Enumerating objects: 16, done.
+remote: Counting objects: 100% (15/15), done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 11 (delta 3), reused 10 (delta 3), pack-reused 0
+Unpacking objects: 100% (11/11), done.
+From https://github.com/amity333/A
+ * branch            HEAD       -> FETCH_HEAD
+Auto-merging MyJavaCode.txt
+CONFLICT (content): Merge conflict in MyJavaCode.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+ayadav33@PUNHWD12792 MINGW64 ~/C (master|MERGING)
+$ git add .
+
+ayadav33@PUNHWD12792 MINGW64 ~/C (master|MERGING)
+$ git commit -m "abcde"
+[master 20e2070] abcde
+ Committer: unknown <ayadav33@PUNHWD12792.corp.capgemini.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+
+ayadav33@PUNHWD12792 MINGW64 ~/C (master)
+$ git push https://github.com/amity333/A.git
+warning: push.default is unset; its implicit value has changed in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the traditional behavior, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+Since Git 2.0, Git defaults to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Username for 'https://github.com': amity333
+Password for 'https://amity333@github.com':
+Counting objects: 6, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 639 bytes | 0 bytes/s, done.
+Total 6 (delta 0), reused 0 (delta 0)
+To https://github.com/amity333/A.git
+   5dcb425..20e2070  master -> master
+
+ayadav33@PUNHWD12792 MINGW64 ~/C (master)
+$ git branch
+* master
+
+ayadav33@PUNHWD12792 MINGW64 ~/C (master)
+$
